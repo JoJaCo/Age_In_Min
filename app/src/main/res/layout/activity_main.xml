@@ -44,15 +44,15 @@
         android:text="SELECT DATE">
 
     </Button>
+
     <TextView
         android:id="@+id/tv_selectDate"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginTop="20dp"
-        android:textSize="25sp"
         android:textColor="@color/purple_500"
-        android:textStyle="bold"
-        />
+        android:textSize="25sp"
+        android:textStyle="bold" />
     <TextView
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
@@ -60,6 +60,7 @@
         android:text="SELECTED DATE"
         android:textSize="25sp"
         android:textStyle="bold"/>
+
     <TextView
         android:id="@+id/tv_selectedDateInMin"
         android:layout_width="wrap_content"
@@ -67,7 +68,7 @@
         android:layout_marginTop="25dp"
         android:textColor="@color/purple_200"
         android:textSize="25sp"
-        android:textStyle="bold"/>
+        android:textStyle="bold" />
     <TextView
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
