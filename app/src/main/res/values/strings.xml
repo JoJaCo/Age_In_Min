@@ -1,4 +1,4 @@
 <resources>
-    <string name="app_name">Age In Min</string>
+    <string name="app_name">Age In Day,Seconds,Years</string>
     <string name="Cal_age">CALCULATE YOUR</string>
 </resources>

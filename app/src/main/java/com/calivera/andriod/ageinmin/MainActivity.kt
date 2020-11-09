@@ -27,16 +27,17 @@ class MainActivity : AppCompatActivity() {
 
     fun clickDatePicker(view:View){
         val dateSelected: TextView = findViewById(R.id.tv_selectDate)
-        val dateInMinits: TextView = findViewById(R.id.tv_selectedDateInMin)
+        val dateInDays: TextView = findViewById(R.id.tv_selectedDateInDays)
+        val dateInSec: TextView = findViewById(R.id.tv_selectedDateInMin)
+        val dateInYears:TextView = findViewById(R.id.tv_selectedDateInYears)
+        val dateTillDeath:TextView = findViewById(R.id.tv_YearsTillDeath)
         val myCalender = Calendar.getInstance()
         val year = myCalender.get(Calendar.YEAR)
         val month = myCalender.get(Calendar.MONTH)
         val day = myCalender.get(Calendar.DAY_OF_MONTH)
          val dpd = DatePickerDialog(this,
                 DatePickerDialog.OnDateSetListener{View,selectedYear,selectedMonth,selectedDayOfMoth ->
-                    Toast.makeText(this, "The chosen year is $selectedYear." +
-                            "the month is $selectedMonth and the day is $selectedDayOfMoth"
-                            , Toast.LENGTH_SHORT).show()
+
                     val selectedDate = "$selectedDayOfMoth/${selectedMonth+1}/$selectedYear"
 
                     dateSelected.text = selectedDate
@@ -47,16 +48,27 @@ class MainActivity : AppCompatActivity() {
 
                     val selectedDateInMinutes = theDate!!.time /60000
                     val selectedMinTODay = selectedDateInMinutes / 1440
+                    val selectedDayToYear = selectedMinTODay / 365
+
 
                     val currentDate = sdf.parse(sdf.format(System.currentTimeMillis()))
 
                     val currentDateinMinutes = currentDate!!.time / 60000
                     val currentDateinDay = currentDateinMinutes / 1440
+                    val currentDateInYear = currentDateinDay / 365
 
                     val  diffInMin = currentDateinMinutes - selectedDateInMinutes
+                    dateInSec.text = diffInMin.toString()
 
                     val diffinDays = currentDateinDay - selectedMinTODay
-                    dateInMinits.text = diffinDays.toString()
+                    dateInDays.text = diffinDays.toString()
+
+                    val diffInYears = currentDateInYear - selectedDayToYear
+                    dateInYears.text = diffInYears.toString()
+
+                    dateTillDeath.text = "dont worry about that Baby, " +
+                            "live it day by day"
+
 
 
 
