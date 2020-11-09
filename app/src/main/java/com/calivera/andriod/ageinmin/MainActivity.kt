@@ -46,12 +46,17 @@ class MainActivity : AppCompatActivity() {
                     val theDate = sdf.parse(selectedDate) //look up parse
 
                     val selectedDateInMinutes = theDate!!.time /60000
+                    val selectedMinTODay = selectedDateInMinutes / 1440
+
                     val currentDate = sdf.parse(sdf.format(System.currentTimeMillis()))
 
                     val currentDateinMinutes = currentDate!!.time / 60000
+                    val currentDateinDay = currentDateinMinutes / 1440
 
                     val  diffInMin = currentDateinMinutes - selectedDateInMinutes
-                    dateInMinits.text = diffInMin.toString()
+
+                    val diffinDays = currentDateinDay - selectedMinTODay
+                    dateInMinits.text = diffinDays.toString()
 
 
 
