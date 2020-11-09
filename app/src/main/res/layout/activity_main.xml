@@ -9,31 +9,6 @@
     android:background="@color/white"
     android:padding="16dp"
     tools:context=".MainActivity">
-
-    <TextView
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginTop="3dp"
-        android:text="@string/Cal_age"
-        android:textSize="25sp"
-        android:textStyle="bold"/>
-    <TextView
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:padding="10dp"
-        android:layout_marginTop="5dp"
-        android:text="AGE"
-        android:background="@color/teal_200"
-        android:textColor="@color/white"
-        android:textSize="25sp"
-        android:textStyle="bold"/>
-    <TextView
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginTop="5dp"
-        android:text="IN MIN"
-        android:textSize="25sp"
-        android:textStyle="bold"/>
     <Button
         android:id= "@+id/btnDataPicker"
         android:layout_width="match_parent"
